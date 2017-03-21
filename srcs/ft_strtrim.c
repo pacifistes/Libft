@@ -12,9 +12,26 @@
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+static char	*end_trim(char const *s, int i, int j, int len)
 {
 	char	*trim;
+
+	trim = ft_strnew(len - i + 1);
+	if (trim == NULL)
+		return (NULL);
+	j = 0;
+	while (s[i] && i <= len)
+	{
+		trim[j] = s[i];
+		i++;
+		j++;
+	}
+	trim[j] = '\0';
+	return (trim);
+}
+
+char		*ft_strtrim(char const *s)
+{
 	int		i;
 	int		j;
 	int		len;
@@ -33,16 +50,5 @@ char	*ft_strtrim(char const *s)
 		len--;
 	if (!s[i])
 		return (ft_strnew(0));
-	trim = ft_strnew(len - i + 1);
-	if (trim == NULL)
-		return (NULL);
-	j = 0;
-	while (s[i] && i <= len)
-	{
-		trim[j] = s[i];
-		i++;
-		j++;
-	}
-	trim[j] = '\0';
-	return (trim);
+	return (end_trim(s, i, j, len));
 }

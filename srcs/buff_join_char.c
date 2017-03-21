@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   buff_join_char.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbrunell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 17:02:40 by bbrunell          #+#    #+#             */
-/*   Updated: 2015/11/26 14:22:34 by bbrunell         ###   ########.fr       */
+/*   Created: 2017/03/21 17:52:31 by bbrunell          #+#    #+#             */
+/*   Updated: 2017/03/21 17:52:35 by bbrunell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	buff_join_char(char c, t_buffer *b)
 {
-	size_t i;
-
-	i = 0;
-	while (i < len)
+	if (b->buff >= BUFFER)
 	{
-		((unsigned char*)b)[i] = c;
-		i++;
+		write(1, b->str_buff, BUFFER);
+		b->buff = 0;
+		b->nbr_write++;
 	}
-	return (b);
+	b->str_buff[b->buff] = c;
+	b->buff = b->buff + 1;
+	if (b->buff >= BUFFER)
+	{
+		write(1, b->str_buff, BUFFER);
+		b->buff = 0;
+		b->nbr_write++;
+	}
 }

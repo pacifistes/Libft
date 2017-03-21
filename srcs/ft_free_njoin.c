@@ -68,17 +68,14 @@ char		*ft_free_njoin(char **str, int nbr_str, int *str_free)
 	join = (char*)malloc(sizeof(char) * (j + 1));
 	if (!join || !tmp)
 		return (NULL);
-	i = 0;
+	i = -1;
 	j = 0;
-	while (i < nbr_str)
-	{
+	while (++i < nbr_str)
 		if (str_free[i] == 1 && str[i])
 		{
 			tmp[j] = str[i];
 			j++;
 		}
-		i++;
-	}
 	tmp[j] = 0;
 	join = ft_join(join, str, nbr_str);
 	free_tab_str(tmp);

@@ -23,6 +23,7 @@ void	buff_join(char *str, t_buffer *b)
 		{
 			write(1, b->str_buff, BUFFER);
 			b->buff = 0;
+			b->nbr_write++;
 		}
 		b->str_buff[b->buff] = str[i];
 		b->buff = b->buff + 1;
@@ -32,5 +33,6 @@ void	buff_join(char *str, t_buffer *b)
 	{
 		write(1, b->str_buff, BUFFER);
 		b->buff = 0;
+		b->nbr_write++;
 	}
 }

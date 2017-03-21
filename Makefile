@@ -14,14 +14,41 @@ NAME = libft.a
 
 SRCSPATH = srcs/
 
-SRCS = ft_strjoin.c ft_strlen.c ft_strnew.c ft_strsub.c ft_atoi.c \
-		ft_strcmp.c ft_putstr.c ft_putchar.c ft_putstr_fd.c ft_verifint.c \
-		ft_putnbr.c ft_strsplit.c ft_strdel.c get_next_line.c ft_check_end.c \
-		ft_memalloc.c ft_strdup.c ft_bzero.c ft_strstr.c ft_putendl.c \
-		ft_itoll.c ft_free_join.c ft_free_join_char.c  ft_strlen_char.c \
-		free_tab_str.c ft_free1_join_char.c ft_free_njoin.c buff_join.c \
-		buff_join_nstr.c ft_strncmp.c size_long_long.c print_nchar.c \
-		ft_putendl_fd.c  buff_sub_join.c\
+SRCS =	ft_strjoin.c\
+		ft_strlen.c\
+		ft_strnew.c\
+		ft_strsub.c\
+		ft_atoi.c\
+		ft_strcmp.c\
+		ft_putstr.c\
+		ft_putchar.c\
+		ft_putstr_fd.c\
+		ft_verifint.c\
+		ft_putnbr.c\
+		ft_strsplit.c\
+		ft_strdel.c\
+		get_next_line.c\
+		ft_check_end.c \
+		ft_memalloc.c\
+		ft_strdup.c\
+		ft_bzero.c\
+		ft_strstr.c\
+		ft_putendl.c\
+		ft_itoll.c\
+		ft_free_join.c\
+		ft_free_join_char.c\
+		ft_strlen_char.c\
+		free_tab_str.c\
+		ft_free1_join_char.c\
+		ft_free_njoin.c\
+		buff_join.c\
+		buff_join_nstr.c\
+		ft_strncmp.c\
+		size_long_long.c\
+		print_nchar.c\
+		ft_putendl_fd.c\
+		buff_sub_join.c\
+		buff_join_char.c\
 		ft_toupper.c\
 		ft_tolower.c\
 		ft_strtrim.c\
