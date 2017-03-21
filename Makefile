@@ -95,6 +95,7 @@ SRCS =	ft_strjoin.c\
 		ft_isalpha.c\
 		ft_isalnum.c\
 		ft_is_negative.c\
+		buff_free_njoin.c
 
 SRC = $(addprefix $(SRCSPATH), $(SRCS))
 

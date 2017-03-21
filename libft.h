@@ -64,6 +64,8 @@ char				*ft_free_njoin(char **str, int nbr_str, int *str_free);
 void				buff_join(char *str, t_buffer *b);
 void				buff_join_nstr(char **str, t_buffer *b,
 int nbr_str);
+void				buff_free_njoin(char **str, t_buffer *b, int nbr_str,
+int *str_free);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					size_long_long(long long int n);
 void				print_nchar(char c, int size);
