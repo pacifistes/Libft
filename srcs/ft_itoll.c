@@ -70,7 +70,7 @@ char		*ft_itoll(long long int n)
 		size_n = ft_itoll_nbr(n);
 		nbr = ft_strnew(size_n);
 		if (!nbr || n == (-9223372036854775807 - 1))
-			return ((nbr == NULL) ? NULL : "-9223372036854775808");
+			return ((nbr == NULL) ? NULL : ft_strdup("-9223372036854775808"));
 		else if (size_n == 1)
 		{
 			nbr[0] = n + 48;
